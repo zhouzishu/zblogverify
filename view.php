@@ -6,7 +6,7 @@ $action='root';
 if (!$zbp->CheckRights($action)) {$zbp->ShowError(6);die();}
 if (!$zbp->CheckPlugin('zblogverify')) {$zbp->ShowError(48);die();}
 
-$blogtitle='Z-Blog应用中心验证回调数据';
+$blogtitle='Z-Blog应用中心验证回调 - 数据查看';
 require $blogpath . 'zb_system/admin/admin_header.php';
 require $blogpath . 'zb_system/admin/admin_top.php';
 $value = new zblogverify_Data;

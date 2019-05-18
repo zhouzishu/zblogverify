@@ -6,7 +6,7 @@ $action='root';
 if (!$zbp->CheckRights($action)) {$zbp->ShowError(6);die();}
 if (!$zbp->CheckPlugin('zblogverify')) {$zbp->ShowError(48);die();}
 
-$blogtitle='ZBLOG应用中心验证回调';
+$blogtitle='Z-Blog应用中心验证回调 - 数据列表';
 require $blogpath . 'zb_system/admin/admin_header.php';
 require $blogpath . 'zb_system/admin/admin_top.php';
 $p = new Pagebar('{%host%}zb_users/plugin/zblogverify/main.php?{page=%page%}{&search=%search%}', false);

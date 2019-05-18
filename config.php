@@ -27,7 +27,7 @@ if (GetVars('act', 'GET') == 'save') {
   Redirect('./config.php' . ($suc == null ? '' : '?act=$suc'));
 }
 
-$blogtitle = 'ZBLOG应用中心验证回调';
+$blogtitle = 'Z-Blog应用中心验证回调 - 设置';
 require $blogpath . 'zb_system/admin/admin_header.php';
 require $blogpath . 'zb_system/admin/admin_top.php';
 ?>
