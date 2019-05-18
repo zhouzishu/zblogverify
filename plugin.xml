@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin version="php">
+<id>zblogverify</id>
+<name>Z-Blog应用中心验证回调</name>
+<url>http://www.z18zs.com/</url>
+<note></note>
+<description></description>
+<path>main.php</path>
+<include>include.php</include>
+<level>1</level>
+<author>
+  <name>捷闪站长网</name>
+  <email>2693558149@qq.com</email>
+  <url>http://www.z18zs.com/</url>
+</author>
+<source>
+  <name></name>
+  <email></email>
+  <url></url>
+</source>
+<adapted>151910</adapted>
+<version>1.0</version>
+<pubdate>2018-04-20</pubdate>
+<modified>2018-04-20</modified>
+<price>0</price>
+<phpver>5.2</phpver>
+<advanced>
+  <dependency></dependency>
+  <rewritefunctions></rewritefunctions>
+  <existsfunctions></existsfunctions>
+  <conflict></conflict>
+</advanced>
+<sidebars>
+  <sidebar1></sidebar1>
+  <sidebar2></sidebar2>
+  <sidebar3></sidebar3>
+  <sidebar4></sidebar4>
+  <sidebar5></sidebar5>
+</sidebars>
+</plugin>
