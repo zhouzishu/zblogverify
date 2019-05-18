@@ -18,6 +18,11 @@ $w = array();
 if (GetVars('search')) {
     $w[] = array('search', 'Verify_appId', 'Verify_host', 'Verify_user_name', GetVars('search'));
 }
+$igOn = (bool)$zbp->Config("zblogverify")->igUsrOn;
+$igName = $zbp->Config("zblogverify")->igName;
+if ($igOn){
+  $w[] = array("<>","Verify_user_name",$igName);
+}
 $order = array('verify_Time' => 'DESC');
 $sql = $zbp->db->sql->Select($zbp->table['zblogverify_Data'], '*', $w, $order, array(($p->PageNow - 1) * $p->PageCount, $p->PageCount), array('pagebar' => $p));
 $array = $zbp->GetListType('zblogverify_Data', $sql);
@@ -31,9 +36,10 @@ $array = $zbp->GetListType('zblogverify_Data', $sql);
   <div class="SubMenu">
   </div>
   <div id="divMain2">
-	<form class="search" id="search" method="post" action="#">
-	<p style="padding: 0.2em 0 0.2em 0;">搜索(网址/应用ID/用户名): <input name="search" style="width:300px;" type="text" value="" /> &nbsp;&nbsp;
-	<input type="submit" class="button" value="搜索"/></p>
+    <form class="search" id="search" method="post" action="#">
+    <p style="padding: 0.2em 0 0.2em 0;">搜索(网址/应用ID/用户名): <input name="search" style="width:300px;" type="text" value="" /> &nbsp;&nbsp;
+      <input type="submit" class="button" value="搜索"/>
+      <a href="config.php" class="button">设置</a></p>
 	</form>
     <table width="100%" style="padding:0;margin:0;" cellspacing="0" cellpadding="0" class="tableBorder tableBorder-thcenter table_striped table_hover">
         <tr>
