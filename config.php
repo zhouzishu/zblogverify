@@ -58,6 +58,11 @@ require $blogpath . 'zb_system/admin/admin_top.php';
           <td>可以隐藏开发者自己的验证信息</td>
         </tr>
         <tr>
+          <td>验证地址</td>
+          <td><?php echo $zbp->host;?>zb_users/plugin/zblogverify/callback.php</td>
+          <td></td>
+        </tr>
+        <tr>
           <td><input type="submit" value="提交" /></td>
           <td colspan="2"></td>
         </tr>
